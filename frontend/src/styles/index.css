@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply border border-white/70 bg-white/75 shadow-glow backdrop-blur-xl;
+  }
+
+  .gradient-button {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-fuchsia-500 via-violet-500 to-sky-500 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-violet-400/30 transition duration-200 hover:-translate-y-0.5 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-fuchsia-200 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .soft-button {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl border border-violet-100 bg-white px-4 py-2 text-sm font-bold text-violet-700 shadow-md shadow-violet-200/40 transition duration-200 hover:-translate-y-0.5 hover:bg-violet-50;
+  }
+
+  .field {
+    @apply w-full rounded-2xl border border-violet-100 bg-white/90 px-4 py-3 text-slate-800 outline-none transition placeholder:text-slate-400 focus:border-fuchsia-300 focus:ring-4 focus:ring-fuchsia-100;
+  }
+}
